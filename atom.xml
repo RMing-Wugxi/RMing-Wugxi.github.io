@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Mingkonic&#39;s blog</title>
   
-  
+  <subtitle>Welcome！</subtitle>
   <link href="http://mingkonic.work/atom.xml" rel="self"/>
   
   <link href="http://mingkonic.work/"/>
@@ -35,29 +35,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Matlab Function</title>
-    <link href="http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/"/>
-    <id>http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/</id>
-    <published>2021-01-12T16:00:00.000Z</published>
-    <updated>2021-01-13T09:15:14.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;妙用一&quot;&gt;&lt;a href=&quot;#妙用一&quot; class=&quot;headerlink&quot; title=&quot;妙用一&quot;&gt;&lt;/a&gt;妙用一&lt;/h1&gt;&lt;h1 id=&quot;Matlab妙用一：利用数据拟合曲线&quot;&gt;&lt;a href=&quot;#Matlab妙用一：利用数据拟合曲线&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Matlab" scheme="http://mingkonic.work/tags/Matlab/"/>
     
   </entry>
   
