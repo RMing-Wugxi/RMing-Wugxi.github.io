@@ -26,7 +26,7 @@
 
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<link rel="alternate" href="/image/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 <body>
     <a id="cover"></a>
@@ -64,60 +64,59 @@
 <p>众所周知，我们有时候得到的一些系列数据，若人为处理计算过于繁琐🤪，需要借助matlab对你所得到的的数据进行分析，得到其中内在的联系，并且还能得出表达式以及拟合出来曲线模型的可靠程度，通过这个方法可以很快得到一些数学模型，从而应用于开发中</p>
 <p>前提条件：是Matlab就行🤔</p>
 <p>**第一步：既然是数据拟合，那就必须要有数据。请允许我先捏造一段数据🤪不出意外这会是线性的</p>
-<p><img src="/.work//:Untitled.png" alt="妙用1"></p>
+<p><img src="/.work//Untitled.png" alt="my"></p>
 <pre><code>                                                                   图-1 数据导入   </code></pre>
 <p>还是得说一下数据的导入方式：                                                          </p>
 <p>1.手动输入😒：此方式最直接，命令行输入就行，但工作量也最大🤣</p>
 <p>2.表格导入：推荐是这种，现在几乎上位机等这些软件都能导出数据表格.csv的格式👏</p>
 <p>举个栗子</p>
 <p>点击 导入数据 按钮</p>
-<p><img src="/.work//Untitled%201.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%201.png"></p>
+<p><img src="/.work//Untitled1.png" alt="my"></p>
 <p>选择你所要导入的数据表格文件，支持 .csv，.xls 以及 .txt 等众多格式</p>
 <p>注意：推荐导出的方式是  数值矩阵  ，便于转换和后续操作</p>
-<p><img src="/.work//Untitled%202.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%202.png"></p>
+<p><img src="/.work//Untitled2.png" alt="my"></p>
 <p>选择导入后你会在工作区，看到你保存的数据</p>
-<p><img src="/.work//Untitled%203.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%203.png"></p>
-<pre><code>    在导入数据后，可以点开双击点开工作区里面的变量来查看数据，可以检查数据是否导入正常，目前我还没出现过异常的情况。此外可以对其中某个数据进行修改或删除操作。</code></pre>
-<p><img src="/.work//Untitled%204.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%204.png"></p>
+<p><img src="/.work//Untitled3.png" alt="my"></p>
+<p>在导入数据后，可以点开双击点开工作区里面的变量来查看数据，可以检查数据是否导入正常，目前我还没出现过异常的情况。此外可以对其中某个数据进行修改或删除操作。</p>
+<p><img src="/.work//Untitled4.png" alt="my"></p>
 <p><strong>第二步：在数据无误的情况下，唤醒神灯🗽（</strong>Curve Fitting**）并放入数据</p>
-<pre><code>          在命令行输入 **cftool** 或者 上方App 更多找到**Curve Fitting**</code></pre>
-<p><img src="/.work//Untitled%205.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%205.png"></p>
+<p>在命令行输入 <strong>cftool</strong> 或者 上方App 更多找到<strong>Curve Fitting</strong></p>
+<p><img src="/.work//Untitled5.png" alt="my"></p>
 <p><strong>工具箱面板介绍</strong></p>
-<p><img src="/.work//Untitled%206.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%206.png"></p>
+<p><img src="/.work//Untitled6.png" alt="my"></p>
 <p><strong>分析小组件</strong></p>
 <p>移动查看类</p>
-<p><img src="/.work//Untitled%207.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%207.png"></p>
+<p><img src="/.work//Untitled7.png" alt="my"></p>
 <p>选择分析类</p>
-<p><img src="/.work//Untitled%208.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%208.png"></p>
+<p><img src="/.work//Untitled8.png" alt="my"></p>
 <p><strong>曲线类型</strong></p>
 <p>A.自定义方程<strong>Custom Equation😃</strong></p>
-<p><img src="/.work//Untitled%209.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%209.png"></p>
+<p><img src="/.work//Untitled9.png" alt="my"></p>
 <p>B.指数函数<strong>Exponential😃</strong></p>
-<p><img src="/.work//Untitled%2010.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2010.png"></p>
+<p><img src="/.work//Untitled10.png" alt="my"></p>
 <p>C.傅里叶级数<strong>Fourier😃</strong></p>
-<p><img src="/.work//Untitled%2011.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2011.png"></p>
+<p><img src="/.work//Untitled11.png" alt="my"></p>
 <p>D.高斯分布<strong>Gaussian😶</strong></p>
-<p><img src="/.work//Untitled%2012.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2012.png"></p>
+<p><img src="/.work//Untitled12.png" alt="my"></p>
 <p>E.插值逼近<strong>Interpolant</strong></p>
 <p>也即是分段的多项式拟合😑</p>
-<p><img src="/.work//Untitled%2013.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2013.png"></p>
+<p><img src="/.work//Untitled13.png" alt="my"></p>
 <p>F.线性拟合<strong>Linear Fitting</strong></p>
 <p>一种特殊的自定义函数，根据实体数据来😑</p>
-<p><img src="/.work//Untitled%2014.png" alt="妙用1"></p>
+<p><img src="/.work//Untitled14.png" alt="my"></p>
 <p>G.多项式<strong>Polynomial🤩</strong></p>
-<p><img src="/.work//Untitled%2015.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2015.png"></p>
+<p><img src="/.work//Untitled15.png" alt="my"></p>
 <p>H.幂函数<strong>Power🤨</strong></p>
-<p><img src="/.work//Untitled%2016.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2016.png"></p>
+<p><img src="/.work//Untitled16.png" alt="my"></p>
 <p>I.有理数逼近<strong>Rational</strong></p>
-<p><img src="/.work//Untitled%2017.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2017.png"></p>
+<p><img src="/.work//Untitled17.png" alt="my"></p>
 <p>J.平滑曲线<strong>Smooting Spline（滤波）🤐</strong></p>
-<p><img src="/.work//Untitled%2018.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2018.png"></p>
-<p>K.正弦和<strong>Sum of  Sine🤨</strong></p>
-<p><img src="/.work//Untitled%2019.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2019.png"></p>
+<p><img src="/.work//Untitled18.png" alt="my"><br>K.正弦和<strong>Sum of  Sine🤨</strong></p>
+<p><img src="/.work//Untitled19.png" alt="my"></p>
 <p>L.韦布尔分布<strong>Weibull</strong>🙃</p>
 <p>连线都没，绝了！</p>
-<p><img src="/.work//Untitled%2020.png" alt="%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/Untitled%2020.png"></p>
-<pre><code>   在得到你想要的的曲线模型后，你就可以应用于你的程序算法开发中，这个作为Matlab的小功能对你的数据处理提供一定的帮助，再也不用面对数据无厘头地瞎忙活🤣。</code></pre>
+<p><img src="/.work//Untitled20.png" alt="my"></p>
+<p>在得到你想要的的曲线模型后，你就可以应用于你的程序算法开发中，这个作为Matlab的小功能对你的数据处理提供一定的帮助，再也不用面对数据无厘头地瞎忙活🤣。</p>
 
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
@@ -127,7 +126,7 @@
             <div class="suffix-box-right">
                 <span class="suffix-box-title">文章作者</span>：Mingkonic
                 <br>
-                <span class="suffix-box-title">文章出处</span>：<a href="/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/" target="_blank">Matlab Function</a>
+                <span class="suffix-box-title">文章出处</span>：<a href="/image/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/" target="_blank">Matlab Function</a>
                 <br>
                 <span class="suffix-box-title">作者签名</span>：去吹吹风吧 能醒的话 感冒也没关系
                 <br>
@@ -145,13 +144,13 @@
             <div class="tag">
                 标签：
                 
-                    <a href="/tags/Matlab/">Matlab</a>
+                    <a href="/image/tags/Matlab/">Matlab</a>
                 
             </div>
         
         <div class="article-prev-next">
             
-                <a href="/2021/01/13/hello-world/" class="prev-prefix">« </a> 上一篇：    <a href="/2021/01/13/hello-world/" title="发布于 2021-01-13 12:21">Hello World</a>
+                <a href="/image/2021/01/13/hello-world/" class="prev-prefix">« </a> 上一篇：    <a href="/image/2021/01/13/hello-world/" title="发布于 2021-01-13 12:21">Hello World</a>
                 <br>
             
             
