@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://mingkonic.work/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-01-13T05:54:46.139Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://mingkonic.work/"/>
+  <updated>2021-01-13T06:38:22.956Z</updated>
+  <id>http://mingkonic.work/</id>
   
   <author>
     <name>Mingkonic</name>
@@ -17,9 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/"/>
+    <id>http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/</id>
+    <published>2021-01-13T06:37:20.210Z</published>
+    <updated>2021-01-13T06:38:22.956Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;title：Matlab function&lt;/p&gt;
+&lt;h1 id=&quot;妙用一&quot;&gt;&lt;a href=&quot;#妙用一&quot; class=&quot;headerlink&quot; title=&quot;妙用一&quot;&gt;&lt;/a&gt;妙用一&lt;/h1&gt;&lt;h1 id=&quot;Matlab妙用一：利用数据拟合曲线&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/01/13/hello-world/"/>
-    <id>http://example.com/2021/01/13/hello-world/</id>
+    <link href="http://mingkonic.work/2021/01/13/hello-world/"/>
+    <id>http://mingkonic.work/2021/01/13/hello-world/</id>
     <published>2021-01-12T16:21:25.005Z</published>
     <updated>2021-01-13T05:54:46.139Z</updated>
     
