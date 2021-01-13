@@ -6,7 +6,7 @@
   <link href="http://mingkonic.work/atom.xml" rel="self"/>
   
   <link href="http://mingkonic.work/"/>
-  <updated>2021-01-13T06:38:22.956Z</updated>
+  <updated>2021-01-13T06:41:27.192Z</updated>
   <id>http://mingkonic.work/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title></title>
-    <link href="http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/"/>
-    <id>http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80%20fd71ae9f835d4b188f02e8a342bae700/</id>
+    <link href="http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/"/>
+    <id>http://mingkonic.work/2021/01/13/%E5%A6%99%E7%94%A8%E4%B8%80/</id>
     <published>2021-01-13T06:37:20.210Z</published>
-    <updated>2021-01-13T06:38:22.956Z</updated>
+    <updated>2021-01-13T06:41:27.192Z</updated>
     
     
       
@@ -29,7 +29,10 @@
         
         
     <summary type="html">&lt;p&gt;title：Matlab function&lt;/p&gt;
-&lt;h1 id=&quot;妙用一&quot;&gt;&lt;a href=&quot;#妙用一&quot; class=&quot;headerlink&quot; title=&quot;妙用一&quot;&gt;&lt;/a&gt;妙用一&lt;/h1&gt;&lt;h1 id=&quot;Matlab妙用一：利用数据拟合曲线&quot;&gt;&lt;a</summary>
+&lt;hr&gt;
+&lt;p&gt;title: 我的标签&lt;br&gt;date: 2021-1-13&lt;br&gt;tags:&lt;br&gt;    - Matlab&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;妙用一&quot;&gt;&lt;a href=&quot;#妙用一&quot;</summary>
         
       
     
