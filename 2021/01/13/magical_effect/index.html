@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>Matlab的妙用</title>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css">
+    
+        <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css">
+    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Mingkonic's blog" type="application/atom+xml">
+</head>
+<body>
+    <a id="cover"></a>
+    <div id="header">
+    <div class="header">
+        <div class="vertical">
+            <div class="inner">
+                <h1 class="header-subtitle">Matlab的妙用</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2021-01-13
+                        </span>
+                        
+                            <span id="/2021/01/13/magical_effect/" class="leancloud_visitors" data-flag-title="Matlab的妙用">
+                                <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                            </span>
+                        
+                        <span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2021/01/13/magical_effect/"></span>
+                        </span>  
+                    </p>                 
+                </div>
+            </div>
+        </div>
+        <canvas id="articleHeaderCanvas"></canvas>
+    </div>
+</div>
+    <div id="container">
+    <div id="content">
+        <div id="article">
+    <div class="toc"></div>
+    <div class="article-body">
+        <h1 id="matlab妙用一利用数据拟合曲线"><a class="markdownIt-Anchor" href="#matlab妙用一利用数据拟合曲线">#</a> Matlab 妙用一：利用数据拟合曲线</h1>
+<p>本次讲解基于 Matlab2018b</p>
+<p>众所周知，我们有时候得到的一些系列数据，若人为处理计算过于繁琐🤪，需要借助 matlab 对你所得到的的数据进行分析，得到其中内在的联系，并且还能得出表达式以及拟合出来曲线模型的可靠程度，通过这个方法可以很快得到一些数学模型，从而应用于开发中</p>
+<p>前提条件：是 Matlab 就行🤔</p>
+<h2 id="第一步既然是数据拟合那就必须要有数据-请允许我先捏造一段数据不出意外这会是线性的"><a class="markdownIt-Anchor" href="#第一步既然是数据拟合那就必须要有数据-请允许我先捏造一段数据不出意外这会是线性的">#</a> 第一步：既然是数据拟合，那就必须要有数据。请允许我先捏造一段数据🤪不出意外这会是线性的</h2>
+<img src="/2021/01/13/magical_effect/Untitled.jpg" class="">
+<p>还是得说一下数据的导入方式：</p>
+<p>1. 手动输入😒：此方式最直接，命令行输入就行，但工作量也最大🤣</p>
+<p>2. 表格导入：推荐是这种，现在几乎上位机等这些软件都能导出数据表格.csv 的格式👏</p>
+<p>举个栗子</p>
+<p>点击 导入数据 按钮</p>
+<img src="/2021/01/13/magical_effect/Untitled1.jpg" class="">
+<p>选择你所要导入的数据表格文件，支持 .csv，.xls 以及 .txt 等众多格式</p>
+<p>注意：推荐导出的方式是  数值矩阵  ，便于转换和后续操作</p>
+<img src="/2021/01/13/magical_effect/Untitled2.jpg" class="">
+<p>选择导入后你会在工作区，看到你保存的数据</p>
+<img src="/2021/01/13/magical_effect/Untitled3.jpg" class="">
+<p>在导入数据后，可以点开双击点开工作区里面的变量来查看数据，可以检查数据是否导入正常，目前我还没出现过异常的情况。此外可以对其中某个数据进行修改或删除操作。</p>
+<img src="/2021/01/13/magical_effect/Untitled4.jpg" class="">
+<h2 id="第二步在数据无误的情况下唤醒神灯curve-fitting并放入数据"><a class="markdownIt-Anchor" href="#第二步在数据无误的情况下唤醒神灯curve-fitting并放入数据">#</a> 第二步：在数据无误的情况下，唤醒神灯🗽（<strong>Curve Fitting</strong>）并放入数据</h2>
+<p>在命令行输入 <strong>cftool</strong> 或者 上方 App 更多找到<strong> Curve Fitting</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled5.jpg" class="">
+<p><strong>工具箱面板介绍</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled6.jpg" class="">
+<p><strong>分析小组件</strong></p>
+<p>移动查看类</p>
+<img src="/2021/01/13/magical_effect/Untitled7.jpg" class="">
+<p>选择分析类</p>
+<img src="/2021/01/13/magical_effect/Untitled8.jpg" class="">
+<p><strong>曲线类型</strong></p>
+<p>A. 自定义方程<strong> Custom Equation😃</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled9.jpg" class="">
+<p>B. 指数函数<strong> Exponential😃</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled10.jpg" class="">
+<p>C. 傅里叶级数<strong> Fourier😃</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled11.jpg" class="">
+<p>D. 高斯分布<strong> Gaussian😶</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled12.jpg" class="">
+<p>E. 插值逼近<strong> Interpolant</strong></p>
+<p>也即是分段的多项式拟合😑</p>
+<img src="/2021/01/13/magical_effect/Untitled13.jpg" class="">
+<p>F. 线性拟合<strong> Linear Fitting</strong></p>
+<p>一种特殊的自定义函数，根据实体数据来😑</p>
+<img src="/2021/01/13/magical_effect/Untitled14.jpg" class="">
+<p>G. 多项式<strong> Polynomial🤩</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled15.jpg" class="">
+<p>H. 幂函数<strong> Power🤨</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled16.jpg" class="">
+<p>I. 有理数逼近<strong> Rational</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled17.jpg" class="">
+<p>J. 平滑曲线<strong> Smooting Spline（滤波）🤐</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled18.jpg" class="">
+<p>K. 正弦和<strong> Sum of  Sine🤨</strong></p>
+<img src="/2021/01/13/magical_effect/Untitled19.jpg" class="">
+<p>L. 韦布尔分布<strong> Weibull</strong>🙃</p>
+<p>连线都没，绝了！</p>
+<img src="/2021/01/13/magical_effect/Untitled20.jpg" class="">
+<p>在得到你想要的的曲线模型后，你就可以应用于你的程序算法开发中，这个作为 Matlab 的小功能对你的数据处理提供一定的帮助，再也不用面对数据无厘头地瞎忙活🤣。</p>
+
+        <p class="suffix-end">__END__</p>
+        <div class="suffix-box">
+            <div class="suffix-box-left">
+                <img src="/image/head.jpg" alt="Mingkonic">
+            </div>
+            <div class="suffix-box-right">
+                <span class="suffix-box-title">文章作者</span>：Mingkonic
+                <br>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2021/01/13/magical_effect/" target="_blank">Matlab的妙用</a>
+                <br>
+                <span class="suffix-box-title">作者签名</span>：去吹吹风吧 能醒的话 感冒也没关系
+                <br>
+                <span class="suffix-box-title">关于主题</span>：<a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+                <br>
+                <span class="suffix-box-title">版权声明</span>：文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+                <br>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="article-footer">
+        
+        
+            <div class="tag">
+                标签：
+                
+                    <a href="/tags/Matlab/">Matlab</a>
+                
+            </div>
+        
+        <div class="article-prev-next">
+            
+                <a href="/2021/01/13/hello-world/" class="prev-prefix">« </a> 上一篇：    <a href="/2021/01/13/hello-world/" title="发布于 2021-01-13 12:21">Hello World</a>
+                <br>
+            
+            
+        </div>
+    </div>
+    
+    <div class="article-comments">
+        <div class="comments-title">
+            评论列表
+        </div>
+        <div class="comments-content">
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</div>
+    <div id="footer"></div>
+
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar"></div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user"><span></span></div>        
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul></ul> 
+            </div> 
+            <div class="menu-link"></div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+
+<!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <!-- require MetingJS-->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <!--网易云-->
+    
+    </div>
+
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+
+    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js"></script>
+        <meting-js id="3094342525" lrcshow="true" server="tencent" type="playlist" fixed="true" autoplay="true" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+    
+    
+    <div class="wrap-right"></div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : 'RMing_Wugxi',
+        GitHubRepositories : 'RMing_Wugxi.github.io',
+
+        BlogUser      : 'Mingkonic',
+        BlogAvatar    : '/image/head.jpg',
+        BlogStartDate : '2021-01-13',
+
+        WebsiteTitleBlur         : '(◍´꒳`◍) Hi, Mingkonic',
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : '(*´∇｀*) 欢迎回来!',
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : '/image/fire.gif',
+
+        ProgressBar: {
+            id       : 'topProgressBar',
+            color    : '#77B6FF',
+            height   : '2px',
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound: {
+                tension  : 16,
+                friction : 5
+            },
+            spinner: {
+                id     : 'spinner',
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : '#F0F0F0',
+                    stroke     : '#272633',
+                    base       : '',
+                    child      : '#272633'
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : 'rgba(255, 255, 255, .2)',
+            clearOffset : 0.3
+        },
+
+        ArticleHeaderAnimationRendered : false,
+        ArticleHeaderAnimation         : {
+            triW                  : 14,
+            triH                  : 20,
+            neighbours            : [
+                
+                    'side',
+                
+                    'top',
+                
+                    'bottom',
+                
+            ],
+            speedTrailAppear      : 0.1,
+            speedTrailDisappear   : 0.1,
+            speedTriOpen          : 1,
+            trailMaxLength        : 30,
+            trailIntervalCreation : 100,
+            delayBeforeDisappear  : 2,
+            colors                : [
+                
+                    '#96EDA6',
+                
+                    '#5BC6A9',
+                
+                    '#38668C',
+                
+                    '#374D84',
+                
+                    '#BED5CB',
+                
+                    '#62ADC6',
+                
+                    '#8EE5DE',
+                
+                    '#304E7B',
+                
+            ]
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : '60%',
+            colorBrightness  : '50%',
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : 'random',
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                '/image/background.jpeg',
+            
+        ],
+        HomeBannerText  : '愿为之所努力的一切，皆有所成',
+
+        ArticleHeaderImage : [
+            
+                '/image/a1.jpeg',
+            
+                '/image/a2.jpeg',
+            
+                '/image/a3.jpeg',
+            
+                '/image/a4.jpeg',
+            
+                '/image/a5.jpeg',
+            
+                '/image/a6.jpeg',
+            
+                '/image/a7.jpeg',
+            
+                '/image/a8.jpeg',
+            
+                '/image/a9.jpeg',
+            
+                '/image/a10.jpeg',
+            
+                '/image/a11.jpeg',
+            
+        ],
+
+        OtherBannerText : '',
+
+        MenuList : [
+            
+                {
+                    name   : '首页',
+                    href   : '/',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '标签',
+                    href   : '/tag',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '分类',
+                    href   : '/category',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '归档',
+                    href   : '/archives',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '赞赏',
+                    href   : '/donate',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '关于',
+                    href   : '/about',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '订阅',
+                    href   : '',    
+                    target : '_blank',
+                    class  : ''
+                },
+            
+                {
+                    name   : '搜索',
+                    href   : '',    
+                    target : '',
+                    class  : 'search'
+                },
+            
+                {
+                    name   : '留言板',
+                    href   : '/comment',    
+                    target : '',
+                    class  : ''
+                },
+            
+                {
+                    name   : '友情链接',
+                    href   : '/friend',    
+                    target : '',
+                    class  : ''
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        icon : 'icon-weibo', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-wechat', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-qq', 
+                        url  : ''
+                    },
+                
+                    {
+                        icon : 'icon-github', 
+                        url  : 'https://github.com/RMing-Wugxi/RMing-Wugxi.github.io'
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : {
+            icon    : 'like-fill',
+            left    : '你心里有一直有个人',
+            right   : '但你们没可能'
+        },
+        ThemeInfo   : false,
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                'Based on cnblogs theme SimpleMemory.',
+                            
+                                '',
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                'SimpleMemory Author:',
+                            
+                                'BNDong',
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                'Theme:',
+                            
+                                'Mingkonic',
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : '',
+
+        Donate : {
+            paypal  : '',
+            bitcoin : '',
+            alipay  : '',
+            wechat  : ''
+        },
+
+        Code : {
+            style : 'normal'
+        },  
+
+        Search : {
+            applicationID : 'SGN702AICY',
+            apiKey        : '359e8415567974939c2ad8205575f980',
+            indexName     : 'mingkonic',
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : '搜索',
+                empty       : '未发现与 「${query}」 相关的内容',
+                stats       : '${hits} 条相关条目，使用了 ${time} 毫秒',
+            }
+        }, 
+
+        Valine : {
+            switch         : true,
+            el             : '.comments-content',
+            appId          : 'AH9He2hYhoYbNwYwFBUUep4e-gzGzoHsz',
+            appKey         : 'vdwmE0pd1kzvgzHDDzb0boJn',
+            placeholder    : '欢迎各位大佬点评...',
+            avatar         : 'mm',
+            meta           : 'nick,mail,link',
+            requiredFields : 'nick,mail',
+            pageSize       : 10,
+            lang           : 'zh-cn',
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : '.toc',
+            contentSelector       : '.article-body',
+            headingSelector       : 'h1, h2, h3, h4, h5',
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : '.toc',
+            positionFixedClass    : 'toc-fixed',
+            fixedSidebarOffset    : '',
+        },
+
+        Require : {
+            baseUrl     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/',
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : 'Meting'
+        },
+        APlayer : {
+            container : '.aplayer',
+            fixed     : true,
+            autoplay  : true,
+            loop      : 'all',
+            order     : 'random',
+            preload   : 'auto',
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            
+        },
+        Meting : {
+            id       : '3094342525', 
+            lrcshow  : true, 
+            server   : 'tencent', 
+            type     : 'playlist', 
+            fixed    : true, 
+            autoplay : true, 
+            loop     : 'all', 
+            order    : 'random', 
+            preload  : 'auto', 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        LazyLoad : {
+            default : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/lazyload.svg'
+        },
+  
+        Style : {
+            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/APlayer.css',
+            archive          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/archive.css',
+            donate           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/donate.css',
+            fancybox         : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/jquery.fancybox.css',
+            footer           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/footer.css',
+            iconfont         : 'https://at.alicdn.com/t/font_1546312_l3yohatebw.css',
+            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/index.css',
+            menuBubble       : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/menu-bubble.css',
+            page             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/page.css',
+            post             : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/post.css',
+            search           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/search.css',
+            tocbot           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/tocbot.css',
+            normal           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/normal.css',
+            night            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/night.css',
+            clipboard        : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/css/clipboard.css'
+        },
+
+        Script: {
+            aplayer          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/APlayer.min.js',
+            config           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.config.js',
+            index            : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js',
+            instantSearch    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/instantsearch.min.js',
+            jQuery           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/jquery-3.4.1.min.js',
+            loading          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js',
+            meting           : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js',
+            iscroll          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js',
+            require          : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js'
+        },
+
+        Font: {
+            LongCang   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css',
+            Monda      : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Monda.css',
+            NotoSansSC : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/NotoSansSC.css',
+            Playball   : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Playball.css',
+            PTMono     : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/PTMono.css',
+            RobotoSlab : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/RobotoSlab.css',
+            Rosario    : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/Rosario.css',
+            UbuntuMono : 'https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/UbuntuMono.css'
+        },
+
+        Suffix : {
+            about : '去吹吹风吧 能醒的话 感冒也没关系'
+        },
+            
+        Theme : {
+            url  : 'https://github.com/first19326/Hexo-LiveForCode',
+            name : 'Hexo - Live For Code'
+        }  
+    };
+</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/index.js"></script>
+</body>
+</html>

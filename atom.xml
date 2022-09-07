@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mingkonic&#39;s blog</title>
+  
+  <subtitle>Welcome！</subtitle>
+  <link href="http://mingkonic.work/atom.xml" rel="self"/>
+  
+  <link href="http://mingkonic.work/"/>
+  <updated>2021-10-10T09:14:03.242Z</updated>
+  <id>http://mingkonic.work/</id>
+  
+  <author>
+    <name>Mingkonic</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是思维And如何思考</title>
+    <link href="http://mingkonic.work/2021/10/10/%E4%BB%80%E4%B9%88%E6%98%AF%E6%80%9D%E7%BB%B4and%E5%A6%82%E4%BD%95%E6%80%9D%E8%80%83/"/>
+    <id>http://mingkonic.work/2021/10/10/%E4%BB%80%E4%B9%88%E6%98%AF%E6%80%9D%E7%BB%B4and%E5%A6%82%E4%BD%95%E6%80%9D%E8%80%83/</id>
+    <published>2021-10-09T16:00:00.000Z</published>
+    <updated>2021-10-10T09:14:03.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现象的表面是一个节点，而思维是一个链条。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;向上可以挖掘事物的根本原因&lt;/li&gt;
+&lt;li&gt;向下可以推断事物的发展结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;分析案例&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Strange knowledge" scheme="http://mingkonic.work/tags/Strange-knowledge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Keil5 由AC5👉AC6编译的转变（HAL库）</title>
+    <link href="http://mingkonic.work/2021/10/05/Keil5%20%E7%94%B1AC5%F0%9F%91%89AC6%E7%BC%96%E8%AF%91%E7%9A%84%E8%BD%AC%E5%8F%98%EF%BC%88HAL%E5%BA%93%EF%BC%89/"/>
+    <id>http://mingkonic.work/2021/10/05/Keil5%20%E7%94%B1AC5%F0%9F%91%89AC6%E7%BC%96%E8%AF%91%E7%9A%84%E8%BD%AC%E5%8F%98%EF%BC%88HAL%E5%BA%93%EF%BC%89/</id>
+    <published>2021-10-04T16:00:00.000Z</published>
+    <updated>2021-10-06T12:49:31.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为何转变&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#为何转变&quot;&gt;#&lt;/a&gt; 为何转变&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AC5 和 AC6 编译速度不同（不生成 Browser</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Keil5" scheme="http://mingkonic.work/tags/Keil5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎么安慰你的朋友</title>
+    <link href="http://mingkonic.work/2021/09/16/How%20to%20comfort%20your%20friend/"/>
+    <id>http://mingkonic.work/2021/09/16/How%20to%20comfort%20your%20friend/</id>
+    <published>2021-09-15T16:00:00.000Z</published>
+    <updated>2021-09-27T09:20:49.592Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;comfort-skills-安慰技巧&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#comfort-skills-安慰技巧&quot;&gt;#&lt;/a&gt; Comfort skills</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Strange knowledge" scheme="http://mingkonic.work/tags/Strange-knowledge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初心</title>
+    <link href="http://mingkonic.work/2021/08/16/original_aspiration/"/>
+    <id>http://mingkonic.work/2021/08/16/original_aspiration/</id>
+    <published>2021-08-15T16:00:00.000Z</published>
+    <updated>2021-09-27T09:18:18.553Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;赛后感想&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#赛后感想&quot;&gt;#&lt;/a&gt; 赛后感想&lt;/h1&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;#&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Wolf Team" scheme="http://mingkonic.work/tags/Wolf-Team/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人才们的思维</title>
+    <link href="http://mingkonic.work/2021/07/13/thought/"/>
+    <id>http://mingkonic.work/2021/07/13/thought/</id>
+    <published>2021-07-12T16:00:00.000Z</published>
+    <updated>2021-09-27T09:20:00.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mode-of-thinking-思维方式&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#mode-of-thinking-思维方式&quot;&gt;#&lt;/a&gt; Mode of Thinking</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Strange knowledge" scheme="http://mingkonic.work/tags/Strange-knowledge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://mingkonic.work/2021/01/13/hello-world/"/>
+    <id>http://mingkonic.work/2021/01/13/hello-world/</id>
+    <published>2021-01-12T16:21:25.005Z</published>
+    <updated>2021-01-13T08:51:46.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;第一次来到这里！&lt;br&gt;
+得闲一起</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab的妙用</title>
+    <link href="http://mingkonic.work/2021/01/13/magical_effect/"/>
+    <id>http://mingkonic.work/2021/01/13/magical_effect/</id>
+    <published>2021-01-12T16:00:00.000Z</published>
+    <updated>2021-09-27T09:18:42.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;matlab妙用一利用数据拟合曲线&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#matlab妙用一利用数据拟合曲线&quot;&gt;#&lt;/a&gt; Matlab 妙用一：利用数据拟合曲线&lt;/h1&gt;
+&lt;p&gt;本次讲解基于</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Matlab" scheme="http://mingkonic.work/tags/Matlab/"/>
+    
+  </entry>
+  
+</feed>
